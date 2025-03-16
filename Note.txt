@@ -1,0 +1,42 @@
+1. Confidence Threshold (conf):
+
+The conf parameter is used to filter out detections that have a confidence score below a certain threshold.
+
+    Usage: conf=0.2
+        This means the model will only show detections where the confidence score is greater than or equal to 20%. This helps to reduce false positives.
+
+2. Other Parameters:
+
+    iou (Intersection over Union threshold):
+    Used for filtering out overlapping detections (e.g., non-maxima suppression). This is useful to eliminate duplicate bounding boxes for the same object.
+        Default: iou=0.5
+        You can adjust this if you want tighter or looser filtering of overlapping boxes.
+
+    classes:
+    Filters detections to specific classes (e.g., only detect people, cars, etc.). You can pass a list of class indices (0 = person, 1 = car, etc.).
+        Example: classes=[0] will only detect people.
+
+    agnostic_nms:
+    Whether or not to use class-agnostic non-maxima suppression. This can be useful if you're detecting multiple classes and want to merge overlapping detections.
+        Default: agnostic_nms=False
+        Set to True if you want class-agnostic NMS.
+
+    max_det:
+    The maximum number of detections to keep per image.
+        Default: max_det=1000
+        You can adjust this if you want to limit the number of detected objects.
+
+===================================================================================================================
+Parameters Breakdown:
+
+    conf=0.2: Only detections with confidence >= 20% will be shown.
+    iou=0.5: This is the threshold for non-maxima suppression (higher means fewer overlapping boxes).
+    classes=[0, 2]: Only detects people (class 0) and cars (class 2).
+    agnostic_nms=True: Merges overlapping detections regardless of the class.
+    max_det=500: Only keeps up to 500 detections (you can adjust this based on your application).
+
+Additional Notes:
+
+    conf: Helps to avoid showing detections with low confidence. It can range from 0 to 1, with 1 being the most confident.
+    iou: Used in non-maxima suppression to filter out redundant detections.
+    classes: Allows you to limit the model to specific classes (useful when you only want to detect certain objects).
