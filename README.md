@@ -19,7 +19,8 @@ This repository contains the complete codebase for Jidapa's Deep Learning-based 
 - `main.py` The main application script that initializes the video capture from CCTV, loads the YOLOv8n model, processes video frames, and displays realtime detection results.
 - `utils/realtime_extended.py` Contains utility functions and extended features such as advanced frame processing, detection postprocessing, and video stream handling.
 - `requirements.txt` Lists all Python dependencies and versions required to run the project smoothly.
-- `example_result_object_detection_realtime.ipynb` Jupyter notebook demonstrating example outputs, performance metrics, and visualization from a demo run.
+- `example_result_object_detection_realtime.ipynb` Jupyter notebook demonstrating example outputs from a demo run.
+- [`example_result video`](https://drive.google.com/file/d/1unFScKpaFGszicRZX8QKoDSZvKGct_dj/preview) Video demonstrating example outputs from a demo run  
 
 ## Usage Notes
 - Ensure that your video input device (CCTV or video file) is correctly configured in `main.py`.
